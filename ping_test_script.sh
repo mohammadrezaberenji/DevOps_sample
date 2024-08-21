@@ -9,7 +9,7 @@ ping_command=" ping -c 3 "
 
 for var in "$@"
 do
-	ping_stored_val=$(ping	-c 3 $var)
+	ping_stored_val=$(ping	-c 50 -i 0.001 $var)
        	IFS=","
 	array=( $ping_stored_val )
 	echo " ip is : $var "
